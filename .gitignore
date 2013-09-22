@@ -5,7 +5,7 @@
 *.war
 *.ear
 
-build.xml
-manifest.mf
-nbproject/
-plugins/
+*.xml
+*.mf
+nbproject*/
+[Pp]lugins*/
