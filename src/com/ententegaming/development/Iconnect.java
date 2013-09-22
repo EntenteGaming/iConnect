@@ -46,6 +46,7 @@ public class Iconnect {
         while(!isStopped()) {
             lm.log(""+i);
             if(i == 60) {
+                // TODO: Edit out timer
                 stopped = true;
                 pm.shutdown();
                 System.exit(0);
