@@ -4,6 +4,8 @@
  */
 package com.ententegaming.development;
 
+import com.ententegaming.development.events.DataCollectedEvent;
+import com.ententegaming.development.events.HandlerRegistry;
 import com.ententegaming.development.logger.LogManager;
 import java.io.File;
 import java.io.IOException;
@@ -38,30 +40,6 @@ public class Iconnect {
         /* Begin Logger */
         lm = new LogManager();
         /* End Logger */
-        
-        int totalClients = 0;
-        
-        SocketServer server;
-        int i = 0;
-        while(!isStopped()) {
-            lm.log(""+i);
-            if(i == 60) {
-                // TODO: Edit out timer
-                stopped = true;
-                pm.shutdown();
-                System.exit(0);
-            }
-            server = new SocketServer(4445);
-            
-            //TODO: Un-comment the server
-            /*try {
-                server.start();
-            } catch (IOException ex) {
-                Logger.getLogger(Iconnect.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-            i++;
-            Thread.sleep(1000);
-        }
     }
     
     public static LogManager getLogManager() {
@@ -70,5 +48,9 @@ public class Iconnect {
     
     public static boolean isStopped() {
         return stopped;
+    }
+    
+    private static void initEvents() {
+        HandlerRegistry.register(DataCollectedEvent.class);
     }
 }
