@@ -11,6 +11,9 @@ import java.util.HashMap;
  * @author iTidez
  */
 public class DynamicStorage {
+    
+    //TO BE IMPLEMENTED
+    
     private HashMap<String, Object> storage;
     private boolean init;
     

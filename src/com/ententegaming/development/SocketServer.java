@@ -26,7 +26,7 @@ public class SocketServer {
     }
     
     public void start() throws IOException {
-        System.out.println("Starting the socket server at port:" + port);
+        //System.out.println("Starting the socket server at port:" + port);
         serverSocket = new ServerSocket(port);
         
         //Listen for clients. Block till one connects

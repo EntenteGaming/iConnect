@@ -52,6 +52,8 @@ public class Iconnect {
                 System.exit(0);
             }
             server = new SocketServer(4445);
+            
+            //TODO: Un-comment the server
             /*try {
                 server.start();
             } catch (IOException ex) {

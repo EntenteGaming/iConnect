@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * @author iTidez
  */
 public class ConnectLogger {
-    
+    //Basic Logger
     public void setup() {
         Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
         logger.setLevel(Level.INFO);

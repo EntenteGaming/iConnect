@@ -13,6 +13,7 @@ import java.util.logging.Logger;
  * @author iTidez
  */
 public class LogManager {
+    // Define logger as our own
     private final static Logger LOGGER = Logger.getLogger(ConnectLogger.class.getName());
     
     public LogManager() {

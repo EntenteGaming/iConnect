@@ -11,6 +11,9 @@ import java.util.HashMap;
  * @author iTidez
  */
 public class StorageManager {
+    
+    // TO BE IMPLEMENTED
+    
     private HashMap<String, DynamicStorage> stores;
     
     public StorageManager() {
